@@ -11,7 +11,11 @@ public class Calculadora {
             return suma();
         } else if (operacion.equals("resta")) {
             return resta();
-        }
+        } else if (operacion.equals("multiplicar")) {
+	    return multiplicar();
+	} else if (operacion.equals("dividir")) {
+            return dividir();
+	}
         return 0;
     }
 
@@ -22,4 +26,14 @@ public class Calculadora {
     public int resta() {
         return num1 - num2;
     }
+
+    public int multiplicar() {
+        return num1 * num2;
+    }
+
+    public int dividir() {
+        if (num2 != 0) return num1 / num2;
+        else return 0;
+    }
+
 }
